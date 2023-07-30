@@ -1,0 +1,18 @@
+def distance_value(arr1, arr2, d):
+    count = 0
+    for num1 in arr1:
+        is_distance_satisfied = True
+        for num2 in arr2:
+            if abs(num1 - num2) <= d:
+                is_distance_satisfied = False
+                break
+        if is_distance_satisfied:
+            count += 1
+    return count
+
+# Test the function with the given example
+arr1 = [4, 5, 8]
+arr2 = [10, 9, 1, 8]
+d = 2
+result = distance_value(arr1, arr2, d)
+print(result)  # Output: 2
